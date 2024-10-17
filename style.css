@@ -1,0 +1,237 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    min-width: 320px;
+}
+
+
+.home-page{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    
+}
+
+
+.header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    padding: 20px 100px;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.689);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo{
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    
+   
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    border: 1px solid black;
+    border-radius: 100px;
+    gap: 2rem;
+    padding: 0 2rem;
+    background-color: white;
+}
+
+.navbar a {
+    display: flex;
+    position: relative;
+    font-size: 30px; /* Smaller initial font size */
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: font-size 0.3s, margin-left 0.3s; /* Smooth transition when resizing */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+    .navbar a {
+        font-size: 25px; /* Font size scales down with viewport */
+         
+    }
+}
+
+@media (max-width: 802px) {
+    .navbar a {
+        font-size: 20px; 
+        gap: 1rem;
+        
+    }
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none; 
+    cursor: pointer;
+    font-size: 32px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+@media (max-width: 725px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        margin-top: 20px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        background-color: rgb(255, 255, 255);
+        padding: 10px 0;
+        z-index: 99;
+        border-radius: 10px;
+    }
+
+    /* Display the hamburger icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Show the navbar when the checkbox is checked */
+    #menu-toggle:checked + .menu-icon + .navbar {
+        display: flex;
+    }
+
+    /* Styling for links in dropdown */
+    .navbar a {
+        padding: 10px;
+        font-size: 18px;
+        text-align: center;
+        margin: 0;
+        border-bottom: 1px solid #ddd; 
+    }
+}
+
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    height: 3px;
+    background-color:  aliceblue;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition:.4s;
+    
+}
+
+
+
+.navbar a:hover::after{
+    transform: scaleX(1.2);
+    background-color: #025e32;
+
+  
+}
+
+
+
+.container{
+    display: flex;
+    padding-top: 100px;
+}
+
+
+
+.info-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+
+ion-icon{
+    font-size: 27px;
+    margin-right: 5px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    padding:6rem 2rem; 
+    width: 100%;
+    box-sizing: border-box; 
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aqua;
+
+    
+}
+
+section h1{
+    font-size: 35px; 
+    
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    font-size: 20px;
+    border-radius: 15px;
+    line-height: 1.8;
+    background-color: white;
+    
+}
+
+.me{
+    display: flex;
+    margin-top: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    background-color: aqua;
+
+    
+
+}
+
+@media (max-width: 535px ){
+    .info{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+}
+    
+
+
+
+
+

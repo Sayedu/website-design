@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <Link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+
+    <div id="navbar"></div>
+    <script>
+        
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+
+    <div class="me">
+        <h1>Hi, My name is Sayedul Islam</h1>
+    </div>
+
+    <section id="background" >
+        <h1>Background</h1>
+        <div class="info">
+            <p>
+                I’m originally from Bangladesh, and my cultural background has had a big influence on my values and aspirations. Family is really important to me, and it motivates me to push forward and achieve my goals. Staying close to my family is something I deeply value, and it inspires me to work hard to build a bright future for myself and for them.
+            </p>
+        </div>
+    
+    </section>
+
+    <section id="education" >
+        <h1>Education</h1>
+        <div class="info">
+            <p>
+                ’m currently pursuing a Bachelor of Science in Computer Science at City College of New York. This program has given me a solid foundation in computer science, and I’ve been applying what I’ve learned through practical experiences. I’ve also had the chance to complete the Google Software Engineering Program (G-SWEP), which has helped me further develop my skills and expertise in software engineering.
+            </p>
+        </div>
+    
+    </section>
+
+    <section id="likes" >
+        <h1>Likes</h1>
+        <div class="info">
+            <p>
+                When it comes to my interests, I love staying active by going on hikes, swimming, and playing games. Traveling is another passion of mine—I enjoy the sense of adventure and the opportunity to explore new places and cultures. These activities help me stay balanced and give me fresh perspectives.
+            </p>
+        </div>
+    
+    </section>
+
+    <section id="career" >
+        <h1>Career Goal</h1>
+        <div class="info">
+            <p>
+
+                My career goal is to continue growing as a software developer with a focus on backend technologies and web development. I aim to apply the skills and experience I’ve gained in previous roles to contribute to impactful projects that solve real-world problems. Ultimately, I want to take on leadership roles where I can guide development teams, build innovative solutions, and make a significant contribution to the tech industry. My long-term ambition is to work on projects that not only improve user experiences but also push the boundaries of what's possible with technology.
+            </p>
+        </div>
+    
+    </section>
+
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
